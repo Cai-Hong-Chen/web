@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <title>門市資訊</title>
+    <meta charset="utf-8">
+    <link href="css/site.css" rel="stylesheet" type="text/css">
+    <link href="css/menu.css" rel="stylesheet" type="text/css">
+    <link href="css/btn1.css" rel="stylesheet" type="text/css">
+    <link href="css/sec.css" rel="stylesheet" type="text/css">
+    <style>
+        main {
+            background-color: white;
+            height: 600px;
+        }
+
+        #a1 {
+            font-family: "標楷體";
+            font-size: 20px;
+            font-style: italic;
+            text-align: center;
+        }
+
+        .sec {
+            background-color: white;
+            font-family: "標楷體";
+            height: 560px;
+            margin: 20px 20px 20px 20px;
+        }
+
+        #q5 {
+            font-family: "標楷體";
+            font-size: 20spx;
+        }
+
+    </style>
+    <script>
+        function getData() {
+            var result = "";
+            result += document.getElementsByName('name')[0].value + "<br>";
+            var gender = document.getElementsByName('gender');
+            result += gender[0].value + " " + gender[0].checked + " ";
+            result += gender[1].value + " " + gender[1].checked + " ";
+            result += gender[2].value + " " + gender[2].checked + " ";
+            result += "<br>";
+            var result = "";
+            result += document.getElementsByName('email')[0].value + "<br>";
+            result += document.getElementsByName('phone')[0].value + "<br>";
+            result += document.getElementsByName('textarea')[0].value + "<br>";
+            result += document.getElementsByName('textarea2')[0].value + "<br>";
+            document.getElementById('result').innerHTML = result;
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <div id="all">
+        <header id="header">
+            <div id="s1">
+                <a href="in.html"><span>門市資訊</span></a>
+                <a href="cu.html"><span>聯絡我們</span></a>
+            </div>
+            <a href="index.html">
+                <div class="logo"><img src="img/S__118824966.jpg"></div>
+            </a>
+        </header>
+        <div id="menu-wrapper">
+            <ul class="menu">
+                <li><a href="index.html">Home</a>
+                <li><a href="tn.html">家具類</a>
+                    <ul>
+                        <li><a href="tn.html">桌子</a>
+                        </li>
+                        <li><a href="tn.html">椅子</a>
+                        </li>
+                        <li><a href="tn.html">夜燈</a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="ph.html">化妝類</a>
+                    <ul>
+                        <li><a href="ph.html">刷具</a></li>
+                        <li><a href="ph.html">口紅</a></li>
+                    </ul>
+                </li>
+                <li><a href="tp.html">填充玩具</a>
+                    <ul>
+                        <li><a href="tp.html">娃娃</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <main>
+            <div class="sec">
+                <h1>聯絡我們</h1>
+                <form>
+                    <div id="q5">姓名(必填):<input type="text" name="name" required placeholder=""><br>
+                        <fieldset>
+                            <legend>性別:</legend>
+                            <input type="radio" name="gender" value="male">男<br>
+                            <input type="radio" name="gender" value="female" checked>女<br>
+                            <input type="radio" name="gender" value="other">其他<br>
+                        </fieldset>
+                        電子郵件(必填):<input type="email" name="email"><br>
+                        電話:<input type="tel" name="phone" value=""><br>
+                        主旨(必填):<textarea name="textarea" rows="2" cols="50"></textarea><br>
+                        訊息(必填):<textarea name="textarea2" rows="5" cols="50"></textarea><br>
+                        <p id="result"></p>
+                        <input type="button" onclick="getData()" value="送出">
+                        <input type="reset" value="清空表單">
+                    </div>
+                </form>
+
+            </div>
+        </main>
+        <footer id="footer">
+            <p id="a1">聯絡資訊:2020010909</p>
+        </footer>
+    </div>
+
+</body>
+
+</html>
